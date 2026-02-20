@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Collections | HOSTTER</title>
+    <link rel="stylesheet" href="collections.css">
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2 class="logo">HOSTTER</h2>
+
+        <ul>
+    <li class="active" onclick="showKnitted()">Knitted Garment</li>
+    <li onclick="showWoven()">Woven Garment</li>
+</ul>
+
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+
+        <h1>Our Collections</h1>
+        <p>Explore our premium quality garments designed with elegance and comfort.</p>
+
+        <div class="garment-container">
+
+            <div class="garment-container">
+
+    <!-- Knitted Section -->
+    <div id="knitted" class="content active-content">
+        <div class="card">
+            <img src="images/knit1.png" alt="">
+            <h3>Knitted T-Shirts</h3>
+        </div>
+    </div>
+
+    <!-- Woven Section -->
+    <div id="woven" class="content">
+        <div class="card">
+            <img src="images/woven1.png" alt="">
+            <h3>Woven Shirts</h3>
+        </div>
+    </div>
+
+</div>
+
+
+        </div>
+
+    </div>
+    <script>
+function showKnitted() {
+    document.getElementById("knitted").style.display = "block";
+    document.getElementById("woven").style.display = "none";
+}
+
+function showWoven() {
+    document.getElementById("knitted").style.display = "none";
+    document.getElementById("woven").style.display = "block";
+}
+</script>
+
+
+</body>
+</html>
