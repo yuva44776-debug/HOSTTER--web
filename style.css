@@ -9,7 +9,7 @@
 body {
     line-height: 1.6;
     background-color: #111;
-    color: rgb(21, 218, 162);
+    color: rgb(147, 161, 171);
 }
 
 /* Navigation */
@@ -18,7 +18,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 20px 50px;
-    background: #031415;
+    background: #2f3749;
 }
 
 nav ul {
