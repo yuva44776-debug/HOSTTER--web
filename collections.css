@@ -98,4 +98,37 @@ body {
 .active-content {
     display: block;
 }
+/* Knitted Products Layout */
+.products-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    padding: 40px;
+}
 
+/* Product Card */
+.card {
+    background: #1c1c1c;
+    border-radius: 12px;
+    overflow: hidden;
+    text-align: center;
+    transition: 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+}
+
+.card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
+
+.card h3 {
+    padding: 15px;
+    color: #ffffff;
+    font-size: 20px;
+}
+
+/* Hover Effect */
+.card:hover {
+    transform: translateY(-10px);
+}
