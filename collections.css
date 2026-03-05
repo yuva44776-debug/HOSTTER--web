@@ -7,23 +7,28 @@
 
 body {
     display: flex;
-    background: #f4f6f9;
+    background: linear-gradient(to bottom, #eaeaeb, #222);
 }
 
 /* ===== SIDEBAR ===== */
 .sidebar {
     width: 250px;
     height: 100vh;
-    background: linear-gradient(to bottom, #111, #222);
+    background: linear-gradient(to bottom, #2e3e72, #222);
     color: white;
     padding: 30px;
     position: fixed;
 }
 
-.logo {
-    font-size: 26px;
-    margin-bottom: 40px;
+.logo{
+     display: inline-block;
+    background-color: #344652;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 8px;
 }
+    
+
 
 .sidebar ul {
     list-style: none;
@@ -52,10 +57,6 @@ body {
     width: 100%;
 }
 
-.main-content h1 {
-    font-size: 36px;
-    margin-bottom: 15px;
-}
 
 .main-content p {
     margin-bottom: 40px;
@@ -91,20 +92,24 @@ body {
 .card:hover {
     transform: translateY(-10px);
 }
+
 .content {
     display: none;
+}
+
+#knitted {
+    display: block;
 }
 
 .active-content {
     display: block;
 }
-/* Knitted Products Layout */
 .products-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 25px;
-    padding: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
 }
+
 
 /* Product Card */
 .card {
@@ -127,8 +132,48 @@ body {
     color: #ffffff;
     font-size: 20px;
 }
-
 /* Hover Effect */
 .card:hover {
     transform: translateY(-10px);
+}
+.collections {
+    display: flex;
+    flex-direction: column;
+}
+.divider {
+    border: none;
+    height: 2px;
+    background-color: #ddd;
+    margin: 10px 20px;
+}
+.divider {
+    border: none;
+    border-top: 1px solid #ccc;
+    width: 80%;
+    margin: 10px auto;
+}
+.section-title{
+    margin-bottom: 40px;
+    margin-top: 20px;
+}
+.section-title{
+    background-color: #ff5fa2;   /* pink color box */
+    color: white;
+    display: inline-block;
+    padding: 10px 25px;
+    border-radius: 6px;
+    margin-bottom: 30px;
+} 
+.collection-container{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.collection-item img{
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
 }
