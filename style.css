@@ -187,3 +187,33 @@ nav ul li a:hover {
         align-items: center;
     }
 }
+/* ===== MOBILE RESPONSIVE ===== */
+
+@media screen and (max-width: 768px) {
+
+body{
+flex-direction: column;
+}
+
+.sidebar{
+width: 100%;
+height: auto;
+position: relative;
+text-align: center;
+}
+
+.main-content{
+margin-left: 0;
+padding: 20px;
+width: 100%;
+}
+
+.products-container{
+justify-content: center;
+}
+
+.card{
+width: 90%;
+}
+
+}
