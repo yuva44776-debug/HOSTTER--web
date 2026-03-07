@@ -169,5 +169,20 @@ justify-content: center;
 .card{
 width: 90%;
 }
+}
+.cart-btn{
+background:#e91e63;
+color:white;
+border:none;
+padding:10px 18px;
+margin-bottom:20px;
+border-radius:6px;
+cursor:pointer;
+font-size:16px;
+transition:0.3s;
+}
 
+.cart-btn:hover{
+background:#ff4081;
+transform:scale(1.05);
 }

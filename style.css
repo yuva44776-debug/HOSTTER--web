@@ -217,3 +217,33 @@ width: 90%;
 }
 
 }
+.contact-card{
+background:#1c1c1c;
+color:white;
+padding:30px;
+text-align:center;
+margin-top:50px;
+border-radius:10px;
+}
+
+.contact-links{
+margin-top:20px;
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.contact-links a{
+text-decoration:none;
+color:white;
+background:#e91e63;
+padding:10px 20px;
+border-radius:6px;
+transition:0.3s;
+}
+
+.contact-links a:hover{
+background:#ff4081;
+transform:scale(1.05);
+}
