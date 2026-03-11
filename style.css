@@ -217,33 +217,87 @@ width: 90%;
 }
 
 }
-.contact-card{
-background:#1c1c1c;
-color:white;
-padding:30px;
+/* CONTACT SECTION */
+
+.contact-section{
+background:#111;
+padding:70px 20px;
 text-align:center;
-margin-top:50px;
-border-radius:10px;
 }
 
-.contact-links{
-margin-top:20px;
+.contact-title{
+color:white;
+font-size:30px;
+margin-bottom:40px;
+letter-spacing:1px;
+}
+
+/* Container */
+
+.contact-container{
 display:flex;
 justify-content:center;
-gap:20px;
+gap:35px;
 flex-wrap:wrap;
 }
 
-.contact-links a{
+/* Buttons */
+
+.contact-btn{
+width:160px;
+height:70px;
+display:flex;
+align-items:center;
+justify-content:center;
 text-decoration:none;
 color:white;
-background:#e91e63;
-padding:10px 20px;
-border-radius:6px;
-transition:0.3s;
+font-size:18px;
+font-weight:600;
+border-radius:14px;
+transition:all 0.35s ease;
+position:relative;
+overflow:hidden;
 }
 
-.contact-links a:hover{
-background:#ff4081;
-transform:scale(1.05);
+/* Hover animation */
+
+.contact-btn:hover{
+transform:translateY(-8px) scale(1.05);
+box-shadow:0 10px 25px rgba(0,0,0,0.5);
+}
+
+/* Shine animation */
+
+.contact-btn::before{
+content:"";
+position:absolute;
+top:0;
+left:-100%;
+width:100%;
+height:100%;
+background:linear-gradient(
+120deg,
+transparent,
+rgba(255,255,255,0.3),
+transparent
+);
+transition:0.6s;
+}
+
+.contact-btn:hover::before{
+left:100%;
+}
+
+/* Colors */
+
+.whatsapp{
+background:linear-gradient(135deg,#25D366,#128C7E);
+}
+
+.linkedin{
+background:linear-gradient(135deg,#0A66C2,#004182);
+}
+
+.gmail{
+background:linear-gradient(135deg,#EA4335,#C5221F);
 }
