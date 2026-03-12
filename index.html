@@ -1,57 +1,61 @@
-
 <!DOCTYPE html>
-<html>
-<head>
-    <title>SANDY| HOSTTER</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
-</head>
-<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<html lang="en">
 
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  AOS.init({
-    duration: 1000,
-    once: true
-  });
-});
-</script>
+<head>
+    <meta charset="UTF-8">
+    <title>HOSTTER APPARELS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- AOS Animation CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+</head>
+
 <body>
 
-    <!-- Navigation -->
-    <nav>
-        <B><div class="logo">HOSTTER APPARELS</div></B>
-        <ul>
-            <li><B><a href="#home">Home</a></B></li>
-            
-            <li><B><a href="#contact">Contact</a></B></li>
-        </ul>
-    </nav>
+<!-- Navigation -->
+<nav>
 
-    <!-- Hero Section -->
-   <section class="hero">
+<div class="logo">HOSTTER APPARELS</div>
 
-    <!-- Background Video -->
-    <video autoplay muted loop playsinline class="bg-video">
-        <source src="video/bg-video.mp4" type="video/mp4">
-    </video>
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
 
-    <div class="hero-content">
-        <div class="hero-text">
-           <h1 class="tagline">TIMELY-RELIABLE-UNIQUE-EFFICIENT</h1>
-        </div>
+</nav>
 
-        <div class="hero-image">
-            <img src="images/profile.png" alt="Profile">
-        </div>
-       <h2><a href="collections.html" class="collections-btn">Collections</a></h2>
+<!-- Hero Section -->
+<section class="hero" id="home">
 
-    </div>
+<!-- Background Video -->
+<video autoplay muted loop playsinline class="bg-video">
+<source src="video/bg-video.mp4" type="video/mp4">
+</video>
+
+<div class="hero-content">
+
+<div class="hero-text" data-aos="fade-up">
+<h1 class="tagline">TIMELY - RELIABLE - UNIQUE - EFFICIENT</h1>
+</div>
+
+<div class="hero-image" data-aos="zoom-in">
+<img src="images/profile.png" alt="Profile Image">
+</div>
+
+<a href="collections.html" class="collections-btn" data-aos="fade-up">
+Explore Collections
+</a>
+
+</div>
 
 </section>
+
+
 <!-- Contact Section -->
- <section class="contact-section">
+<section class="contact-section" id="contact">
 
 <h2 class="contact-title">Contact Us</h2>
 
@@ -72,6 +76,17 @@ Gmail
 </div>
 
 </section>
-  
+
+
+<!-- AOS Animation Script -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+AOS.init({
+duration: 1000,
+once: true
+});
+</script>
+
 </body>
 </html>
