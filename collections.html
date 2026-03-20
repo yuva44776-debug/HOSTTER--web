@@ -27,7 +27,12 @@
 <!-- Main Content -->
 <div class="main-content">
 
-<h1><b><u>OUR COLLECTION</u></b></h1>
+<h1><b><u>OUR COLLECTION</u></b></h1> 
+
+<!-- Cart Icon -->
+<div class="cart-icon">
+    🛒 <span id="cart-count">0</span>
+</div>
 
 
 
@@ -236,8 +241,19 @@ document.getElementById("woven").style.display="none";
 document.getElementById("sports").style.display="block";
 }
 
+/* ✅ ADD THIS BELOW */
+
+let count = 0;
+
+let buttons = document.querySelectorAll(".add-to-cart");
+
+buttons.forEach(function(btn){
+    btn.addEventListener("click", function(){
+        count++;
+        document.getElementById("cart-count").innerText = count;
+    });
+});
 
 </script>
-
 </body>
 </html>
