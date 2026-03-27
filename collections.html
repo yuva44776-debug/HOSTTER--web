@@ -30,8 +30,19 @@
 <h1><b><u>OUR COLLECTION</u></b></h1> 
 
 <!-- Cart Icon -->
-<div class="cart-icon">
+<div class="cart-icon" onclick="toggleCart()">
     🛒 <span id="cart-count">0</span>
+</div>
+
+<!-- Cart Box -->
+
+<div id="cart-box" class="cart-box">
+    <h3>Your Cart</h3>
+    <ul id="cart-items"></ul>
+
+<p class="total">
+Total: $<span id="total-price">0</span>
+</p>
 </div>
 
 
@@ -220,7 +231,6 @@
 
 
 <!-- ================= SCRIPT ================= -->
-
 <script>
 
 function showKnitted(){
@@ -241,16 +251,53 @@ document.getElementById("woven").style.display="none";
 document.getElementById("sports").style.display="block";
 }
 
-/* ✅ ADD THIS BELOW */
+/* ✅ CART FUNCTIONALITY */
+
+function toggleCart(){
+let cart = document.getElementById("cart-box");
+cart.style.display = (cart.style.display === "block") ? "none" : "block";
+}
 
 let count = 0;
+let total = 0;
 
 let buttons = document.querySelectorAll(".add-to-cart");
 
 buttons.forEach(function(btn){
     btn.addEventListener("click", function(){
+
         count++;
         document.getElementById("cart-count").innerText = count;
+
+        let product = this.parentElement.querySelector("h3").innerText;
+        let priceText = this.parentElement.querySelector(".price").innerText;
+        let price = parseInt(priceText.replace("$",""));
+
+        total += price;
+        document.getElementById("total-price").innerText = total;
+
+        // Create list item
+        let li = document.createElement("li");
+
+        li.innerHTML = `
+            ${product} - $${price}
+            <button class="remove-btn">❌</button>
+        `;
+
+        // Remove function
+        li.querySelector(".remove-btn").addEventListener("click", function(){
+
+            li.remove(); // remove item
+
+            count--;
+            document.getElementById("cart-count").innerText = count;
+
+            total -= price;
+            document.getElementById("total-price").innerText = total;
+
+        });
+
+        document.getElementById("cart-items").appendChild(li);
     });
 });
 

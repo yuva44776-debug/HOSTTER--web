@@ -222,3 +222,50 @@ font-weight: bold;
 margin-left: 5px;
 color: #ffcc00;
 }
+
+/* Cart Box */
+.cart-box{
+position: fixed;
+top: 70px;
+right: 20px;
+width: 250px;
+background: #fff;
+color: #000;
+border-radius: 10px;
+padding: 15px;
+box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+display: none;
+z-index: 1000;
+}
+
+/* Cart items list */
+.cart-box ul{
+list-style: none;
+padding: 0;
+}
+
+.cart-box li{
+padding: 8px 0;
+border-bottom: 1px solid #ddd;
+font-size: 14px;
+.total{
+margin-top: 10px;
+font-weight: bold;
+font-size: 16px;
+text-align: right;
+}
+}
+.remove-btn{
+background: rgb(0, 0, 0);
+color: white;
+border: none;
+padding: 4px 8px;
+margin-left: 10px;
+cursor: pointer;
+border-radius: 5px;
+font-size: 12px;
+}
+
+.remove-btn:hover{
+background: darkred;
+}
