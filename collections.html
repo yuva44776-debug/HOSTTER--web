@@ -277,12 +277,15 @@ buttons.forEach(function(btn){
         document.getElementById("total-price").innerText = total;
 
         // Create list item
-        let li = document.createElement("li");
+       let imgSrc = this.parentElement.querySelector("img").src;
 
-        li.innerHTML = `
-            ${product} - $${price}
-            <button class="remove-btn">❌</button>
-        `;
+let li = document.createElement("li");
+
+li.innerHTML = `
+    <img src="${imgSrc}" class="cart-img">
+    ${product} - $${price}
+    <button class="remove-btn">❌</button>
+`;
 
         // Remove function
         li.querySelector(".remove-btn").addEventListener("click", function(){
