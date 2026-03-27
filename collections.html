@@ -251,58 +251,80 @@ document.getElementById("woven").style.display="none";
 document.getElementById("sports").style.display="block";
 }
 
-/* ✅ CART FUNCTIONALITY */
+/* ✅ CART WITH LOCAL STORAGE */
 
 function toggleCart(){
 let cart = document.getElementById("cart-box");
 cart.style.display = (cart.style.display === "block") ? "none" : "block";
 }
 
+// Load cart from storage
+let cartItems = JSON.parse(localStorage.getItem("cart")) || [];
 let count = 0;
 let total = 0;
 
+function updateCartUI(){
+let cartList = document.getElementById("cart-items");
+cartList.innerHTML = "";
+
+count = 0;
+total = 0;
+
+cartItems.forEach((item, index)=>{
+
+    count++;
+    total += item.price;
+
+    let li = document.createElement("li");
+
+    li.innerHTML = `
+        <img src="${item.img}" class="cart-img">
+        ${item.name} - $${item.price}
+        <button class="remove-btn">❌</button>
+    `;
+
+    // Remove item
+    li.querySelector(".remove-btn").addEventListener("click", function(){
+        cartItems.splice(index,1);
+        localStorage.setItem("cart", JSON.stringify(cartItems));
+        updateCartUI();
+    });
+
+    cartList.appendChild(li);
+});
+
+// Update UI
+document.getElementById("cart-count").innerText = count;
+document.getElementById("total-price").innerText = total;
+}
+
+// Add to cart
 let buttons = document.querySelectorAll(".add-to-cart");
 
 buttons.forEach(function(btn){
     btn.addEventListener("click", function(){
 
-        count++;
-        document.getElementById("cart-count").innerText = count;
-
         let product = this.parentElement.querySelector("h3").innerText;
         let priceText = this.parentElement.querySelector(".price").innerText;
         let price = parseInt(priceText.replace("$",""));
+        let imgSrc = this.parentElement.querySelector("img").src;
 
-        total += price;
-        document.getElementById("total-price").innerText = total;
-
-        // Create list item
-       let imgSrc = this.parentElement.querySelector("img").src;
-
-let li = document.createElement("li");
-
-li.innerHTML = `
-    <img src="${imgSrc}" class="cart-img">
-    ${product} - $${price}
-    <button class="remove-btn">❌</button>
-`;
-
-        // Remove function
-        li.querySelector(".remove-btn").addEventListener("click", function(){
-
-            li.remove(); // remove item
-
-            count--;
-            document.getElementById("cart-count").innerText = count;
-
-            total -= price;
-            document.getElementById("total-price").innerText = total;
-
+        // Add item to array
+        cartItems.push({
+            name: product,
+            price: price,
+            img: imgSrc
         });
 
-        document.getElementById("cart-items").appendChild(li);
+        // Save to localStorage
+        localStorage.setItem("cart", JSON.stringify(cartItems));
+
+        updateCartUI();
     });
 });
+
+// Load cart on page load
+updateCartUI();
 
 </script>
 </body>
