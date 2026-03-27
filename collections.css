@@ -305,3 +305,25 @@ border-radius:5px;
 margin-right:8px;
 vertical-align:middle;
 }
+/* Notification Popup */
+.notification{
+position: fixed;
+bottom: 80px;
+right: 20px;
+background: #28a745;
+color: white;
+padding: 12px 20px;
+border-radius: 8px;
+font-size: 14px;
+box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+opacity: 0;
+transform: translateY(20px);
+transition: all 0.4s ease;
+z-index: 2000;
+}
+
+/* Show notification */
+.notification.show{
+opacity: 1;
+transform: translateY(0);
+}
