@@ -10,10 +10,15 @@ div.classList.add("cart-item");
 total += item.price;
 
 div.innerHTML = `
-<img src="${item.img}">
-<h3>${item.name}</h3>
-<p>$${item.price}</p>
-<button onclick="removeItem(${index})">Remove</button>
+<div class="cart-left">
+    <img src="${item.img}">
+    <div>
+        <h3>${item.name}</h3>
+        <p>$${item.price}</p>
+    </div>
+</div>
+
+<button class="remove-btn" onclick="removeItem(${index})">Remove</button>
 `;
 
 container.appendChild(div);

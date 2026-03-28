@@ -1,16 +1,19 @@
 body{
 font-family: Arial;
 padding: 20px;
+background: linear-gradient(to bottom, #eaeaeb, #222);
 }
 
 .cart-item{
 display: flex;
 align-items: center;
-gap: 20px;
-background: linear-gradient(to bottom, #eaeaeb, #222);
+justify-content: space-between; 
+gap: 15px;
+background: #f5f5f5;
 margin-bottom: 15px;
 padding: 10px;
 border-radius: 10px;
+position: relative;
 }
 
 .cart-item img{
@@ -28,4 +31,25 @@ background: orange;
 padding: 10px 20px;
 border: none;
 cursor: pointer;
+}
+.cart-left{
+display: flex;
+align-items: center;
+gap: 15px;
+}
+.remove-btn{
+background: #ff4d4d;   /* 🔴 red color */
+color: white;
+border: none;
+padding: 6px 12px;
+border-radius: 6px;
+cursor: pointer;
+font-size: 13px;
+transition: 0.3s;
+}
+
+/* Hover effect */
+.remove-btn:hover{
+background: orange;
+transform: scale(1.05);
 }
