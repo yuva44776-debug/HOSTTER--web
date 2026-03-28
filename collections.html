@@ -30,7 +30,7 @@
 <h1><b><u>OUR COLLECTION</u></b></h1> 
 
 <!-- Cart Icon -->
-<div class="cart-icon" onclick="toggleCart()">
+<div class="cart-icon" onclick="goToCart()">
     🛒 <span id="cart-count">0</span>
 </div>
 
@@ -253,9 +253,8 @@ document.getElementById("sports").style.display="block";
 
 /* ✅ CART WITH LOCAL STORAGE */
 
-function toggleCart(){
-let cart = document.getElementById("cart-box");
-cart.style.display = (cart.style.display === "block") ? "none" : "block";
+function goToCart(){
+    window.location.href = "cart.html";
 }
 
 // Load cart from storage

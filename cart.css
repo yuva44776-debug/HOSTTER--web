@@ -1,0 +1,31 @@
+body{
+font-family: Arial;
+padding: 20px;
+}
+
+.cart-item{
+display: flex;
+align-items: center;
+gap: 20px;
+background: linear-gradient(to bottom, #eaeaeb, #222);
+margin-bottom: 15px;
+padding: 10px;
+border-radius: 10px;
+}
+
+.cart-item img{
+width: 80px;
+height: 80px;
+object-fit: cover;
+}
+
+.summary{
+margin-top: 20px;
+}
+
+.order-btn{
+background: orange;
+padding: 10px 20px;
+border: none;
+cursor: pointer;
+}
