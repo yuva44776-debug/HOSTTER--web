@@ -14,6 +14,10 @@
 </head>
 
 <body>
+    <div id="loader">
+    <div class="spinner"></div>
+    <h2>HOSTTER APPARELS</h2>
+</div>
 
 <!-- Navigation -->
 <nav class="navbar">
@@ -211,6 +215,9 @@ LinkedIn
 <a href="mailto:hellohostterapparels@gmail.com" class="contact-btn gmail">
 Gmail
 </a>
+<a href="https://www.instagram.com/hostter_apparels" target="_blank" class="contact-btn instagram">
+Instagram
+</a>
 
 </div>
 
@@ -221,6 +228,17 @@ Gmail
 AOS.init({
 duration: 1000,
 once: true
+});
+</script>
+<script>
+window.addEventListener("load", function(){
+
+setTimeout(function(){
+
+document.getElementById("loader").style.display = "none";
+
+}, 2000);
+
 });
 </script>
 
