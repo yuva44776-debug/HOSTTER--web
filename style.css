@@ -220,7 +220,6 @@ body {
     gap: 30px;
     flex-wrap: wrap;
 }
-
 .contact-btn {
     width: 150px;
     height: 60px;
@@ -232,21 +231,34 @@ body {
     border-radius: 10px;
     transition: 0.3s;
 }
-
-.contact-btn:hover {
-    transform: translateY(-5px);
+/* WhatsApp */
+.whatsapp{
+background:#25D366;
 }
 
-.whatsapp {
-    background: #25D366;
+.whatsapp:hover{
+transform:translateY(-8px) scale(1.05);
+box-shadow:0 10px 25px rgba(37,211,102,0.5);
 }
 
-.linkedin {
-    background: #0A66C2;
+/* LinkedIn */
+.linkedin{
+background:#0A66C2;
 }
 
-.gmail {
-    background: #EA4335;
+.linkedin:hover{
+transform:translateY(-8px) scale(1.05);
+box-shadow:0 10px 25px rgba(10,102,194,0.5);
+}
+
+/* Gmail */
+.gmail{
+background:#EA4335;
+}
+
+.gmail:hover{
+transform:translateY(-8px) scale(1.05);
+box-shadow:0 10px 25px rgba(234,67,53,0.5);
 }
 
 /* RESPONSIVE */
