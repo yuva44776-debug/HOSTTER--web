@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import '../styles/index.css';
+import './styles/index.css';
 import Loader from './components/Loader';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';

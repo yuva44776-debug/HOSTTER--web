@@ -249,6 +249,15 @@ section {
     line-height: 1.8;
 }
 
+.about-intro {
+    text-align: justify;
+    margin: 0 auto 20px;
+    max-width: 800px;
+    color: #555;
+    font-size: 16px;
+    line-height: 1.9;
+}
+
 .about-grid {
     display: flex;
     justify-content: center;
